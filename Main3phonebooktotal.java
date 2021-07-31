@@ -1,21 +1,41 @@
+/*p.245 ì‹¤ìŠµë¬¸ì œ8
+ì´ë¦„(name), ì „í™”ë²ˆí˜¸(tel) í•„ë“œì™€ ìƒì„±ìž ë“±ì„ ê°€ì§„ Phoneí´ëž˜ìŠ¤ë¥¼ ìž‘ì„±í•˜ê³ , 
+ì‹¤í–‰ ì˜ˆì‹œì™€ ê°™ì´ ìž‘ë™í•˜ëŠ” PhoneBookí´ëž˜ìŠ¤ë¥¼ ìž‘ì„±í•˜ë¼.
+ì˜ˆì‹œ ìž…ë ¥ 1 
+ì¸ì›ìˆ˜>>-2
+ì¸ì›ìˆ˜>>0
+ì¸ì›ìˆ˜>>3
+ì´ë¦„ê³¼ ì „í™”ë²ˆí˜¸(ì´ë¦„ê³¼ ë²ˆí˜¸ëŠ” ë¹ˆ ì¹¸ì—†ì´ ìž…ë ¥)>>í™©ê¸°íƒœ 777-7777
+ì´ë¦„ê³¼ ì „í™”ë²ˆí˜¸(ì´ë¦„ê³¼ ë²ˆí˜¸ëŠ” ë¹ˆ ì¹¸ì—†ì´ ìž…ë ¥)>>ë‚˜ëª…í’ˆ 999-9999
+ì´ë¦„ê³¼ ì „í™”ë²ˆí˜¸(ì´ë¦„ê³¼ ë²ˆí˜¸ëŠ” ë¹ˆ ì¹¸ì—†ì´ ìž…ë ¥)>>ìµœìžë°” 333-1234
+ê²€ìƒ‰í•  ì´ë¦„>>í™©ê¸°ìˆœ
+ê²€ìƒ‰í•  ì´ë¦„>>ìµœìžë°”
+ê²€ìƒ‰í•  ì´ë¦„>>ê·¸ë§Œ
+ì˜ˆì‹œ ì¶œë ¥ 1
+ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤...
+í™©ê¸°ìˆœ ì´ ì—†ìŠµë‹ˆë‹¤.
+ìµœìžë°”ì˜ ë²ˆí˜¸ëŠ” 333-1234 ìž…ë‹ˆë‹¤.
+*/
+
+
 import java.util.Scanner;
 
 public class Main3phonebooktotal{
   public static void main(String [] arg) {
     PhoneBook phonebook = new PhoneBook();
-    //PhoneBook Å¬·¡½ºÀÇ PhoneBook()Å¸ÀÔ=Áï »ý¼ºÀÚ °´Ã¼¸¦ »ý¼ºÇÏ´Âµ¥, ±×°É °¡¸®Å°´Â ·¹ÆÛ·±½º º¯¼ö°¡ phonebookÀÌ´Ù.
-    phonebook.run(); //±× ·¹ÆÛ·±½º º¯¼ö°¡ ±× Å¬·¡½ºÀÇ ¸â¹ö ¸Þ¼Òµå run()¿¡ Á¢±ÙÇÑ´Ù.
+    //PhoneBook í´ëž˜ìŠ¤ì˜ PhoneBook()íƒ€ìž…=ì¦‰ ìƒì„±ìž ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ”ë°, ê·¸ê±¸ ê°€ë¦¬í‚¤ëŠ” ë ˆí¼ëŸ°ìŠ¤ ë³€ìˆ˜ê°€ phonebookì´ë‹¤.
+    phonebook.run(); //ê·¸ ë ˆí¼ëŸ°ìŠ¤ ë³€ìˆ˜ê°€ ê·¸ í´ëž˜ìŠ¤ì˜ ë©¤ë²„ ë©”ì†Œë“œ run()ì— ì ‘ê·¼í•œë‹¤.
   }
 }
 class Phone {
 	private String name;
 	private String tel;
-	public Phone(String name, String tel) { //¸Å°³º¯¼ö¸¦ °¡Áö´Â »ý¼ºÀÚ. »ý¼ºÀÚµµ ¸Þ¼ÒµåÀÓ!
+	public Phone(String name, String tel) { //ë§¤ê°œë³€ìˆ˜ë¥¼ ê°€ì§€ëŠ” ìƒì„±ìž. ìƒì„±ìžë„ ë©”ì†Œë“œìž„!
         this.name = name;
         this.tel = tel;
     }
-	public String getName() {return name;}//name ÇÊµå ¹ÝÈ¯ÇÏ´Â ¸â¹ö ¸Þ¼Òµå
-	public String getTel() {return tel;}//tel ÇÊµå ¹ÝÈ¯ÇÏ´Â ¸â¹ö ¸Þ¼Òµå
+	public String getName() {return name;}//name í•„ë“œ ë°˜í™˜í•˜ëŠ” ë©¤ë²„ ë©”ì†Œë“œ
+	public String getTel() {return tel;}//tel í•„ë“œ ë°˜í™˜í•˜ëŠ” ë©¤ë²„ ë©”ì†Œë“œ
 }
 class PhoneBook {
 	private int num;
@@ -24,31 +44,31 @@ class PhoneBook {
 	void run() {
 		Scanner scanner = new Scanner(System.in);
 		while(true) {
-			System.out.print("ÀÎ¿ø¼ö>>"); 
+			System.out.print("ì¸ì›ìˆ˜>>"); 
 		    try{
 		    	this.num = scanner.nextInt();
 			    this.phones = new Phone[num]; 
 			    }catch (NegativeArraySizeException e) {System.out.print("");}
-			//numÇàÂ¥¸® PhoneÅ¬·¡½ºÀÇ °´Ã¼ ¹è¿­ Ä­ÀÇ »ý¼º.
+			//numí–‰ì§œë¦¬ Phoneí´ëž˜ìŠ¤ì˜ ê°ì²´ ë°°ì—´ ì¹¸ì˜ ìƒì„±.
 		    if(num>0) {
 		    	for (int i=0;i<num;i++) {
-					System.out.print("ÀÌ¸§°ú ÀüÈ­¹øÈ£(ÀÌ¸§°ú ¹øÈ£´Â ºó Ä­¾øÀÌ ÀÔ·Â)>>");
+					System.out.print("ì´ë¦„ê³¼ ì „í™”ë²ˆí˜¸(ì´ë¦„ê³¼ ë²ˆí˜¸ëŠ” ë¹ˆ ì¹¸ì—†ì´ ìž…ë ¥)>>");
 					String name = scanner.next();
 					String tel = scanner.next();
 					phones[i]=new Phone(name, tel);}
-				//ÃÊ±âÈ­ ³¡³².
-				System.out.println("ÀúÀåµÇ¾ú½À´Ï´Ù...");
+				//ì´ˆê¸°í™” ëë‚¨.
+				System.out.println("ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤...");
 				
 				int i;
 				for( ; ; ) {
-					System.out.print("°Ë»öÇÒ ÀÌ¸§>>");
+					System.out.print("ê²€ìƒ‰í•  ì´ë¦„>>");
 					String nameinput= scanner.next();
-					if (nameinput.equals("±×¸¸")) break;
+					if (nameinput.equals("ê·¸ë§Œ")) break;
 					for(i=0;i<num;i++) {
 						if (nameinput.equals(phones[i].getName())) {
-							System.out.println(nameinput+"ÀÇ ¹øÈ£´Â "+phones[i].getTel()+" ÀÔ´Ï´Ù.");
+							System.out.println(nameinput+"ì˜ ë²ˆí˜¸ëŠ” "+phones[i].getTel()+" ìž…ë‹ˆë‹¤.");
 							break;}}
-					if(i==num) System.out.println(nameinput+" ÀÌ  ¾ø½À´Ï´Ù.");}
+					if(i==num) System.out.println(nameinput+" ì´  ì—†ìŠµë‹ˆë‹¤.");}
 			scanner.close();
 			break;
 	        }
