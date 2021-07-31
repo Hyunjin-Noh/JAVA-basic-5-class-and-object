@@ -1,7 +1,16 @@
+/*p.242 ì‹¤ìŠµë¬¸ì œ4
+ì˜ˆì‹œ ì…ë ¥ 1 
+2 2 8 7 5 5 6 6
+ì˜ˆì‹œ ì¶œë ¥ 1
+(2,2)ì—ì„œ í¬ê¸°ê°€ 8x7ì¸ ì‚¬ê°í˜•
+sì˜ ë©´ì ì€ 36
+tëŠ” rì„ í¬í•¨í•©ë‹ˆë‹¤.
+*/
+
 import java.util.Scanner;
 
 public class Main2comparetworectangle{
-	public static void main(String[] arg) { //½ÇÇàÀ» À§ÇÑ ¸ŞÀÎ ¸Ş¼Òµå
+	public static void main(String[] arg) { //ì‹¤í–‰ì„ ìœ„í•œ ë©”ì¸ ë©”ì†Œë“œ
         int x, y, w, h;
         Scanner sc = new Scanner(System.in);
         Rectangle t = new Rectangle(1, 1, 10, 10);
@@ -17,12 +26,12 @@ public class Main2comparetworectangle{
         w = sc.nextInt();
         h = sc.nextInt();
         Rectangle s = new Rectangle(x, y, w, h);
-        //t, r, s´Â ·¹ÆÛ·±½ºº¯¼ö
+        //t, r, sëŠ” ë ˆí¼ëŸ°ìŠ¤ë³€ìˆ˜
       
-        r.show();//Á¡ ¿¬»êÀÚ ÀÌ¿ëÇØ¼­ ¸â¹ö ¸Ş¼Òµå¿¡ Á¢±ÙÇÏ¿© ½ÇÇà
-        System.out.println("sÀÇ ¸éÀûÀº "+s.square());//Á¡ ¿¬»êÀÚ ÀÌ¿ëÇØ¼­ ¸â¹ö ¸Ş¼Òµå¿¡ Á¢±ÙÇÏ¿© ½ÇÇà
-        if(t.contains(r)) System.out.println("t´Â rÀ» Æ÷ÇÔÇÕ´Ï´Ù.");
-        if(t.contains(s)) System.out.println("t´Â s¸¦ Æ÷ÇÔÇÕ´Ï´Ù.");
+        r.show();//ì  ì—°ì‚°ì ì´ìš©í•´ì„œ ë©¤ë²„ ë©”ì†Œë“œì— ì ‘ê·¼í•˜ì—¬ ì‹¤í–‰
+        System.out.println("sì˜ ë©´ì ì€ "+s.square());//ì  ì—°ì‚°ì ì´ìš©í•´ì„œ ë©¤ë²„ ë©”ì†Œë“œì— ì ‘ê·¼í•˜ì—¬ ì‹¤í–‰
+        if(t.contains(r)) System.out.println("tëŠ” rì„ í¬í•¨í•©ë‹ˆë‹¤.");
+        if(t.contains(s)) System.out.println("tëŠ” së¥¼ í¬í•¨í•©ë‹ˆë‹¤.");
         sc.close();
     }
 }
@@ -30,21 +39,21 @@ public class Main2comparetworectangle{
 class Rectangle {
     private int x, y, w, h;
     
-    public Rectangle(int x, int y, int w, int h){//¸Å°³º¯¼ö ¹Ş¾Æ ÇÊµå ÃÊ±âÈ­ÇÏ´Â »ı¼ºÀÚ. »ı¼ºÀÚµµ ¸Ş¼Òµå¹Ç·Î Áß°ıÈ£ ²À ÇÊ¿ä
+    public Rectangle(int x, int y, int w, int h){//ë§¤ê°œë³€ìˆ˜ ë°›ì•„ í•„ë“œ ì´ˆê¸°í™”í•˜ëŠ” ìƒì„±ì. ìƒì„±ìë„ ë©”ì†Œë“œë¯€ë¡œ ì¤‘ê´„í˜¸ ê¼­ í•„ìš”
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
     }
-    public void show(){//»ç°¢Çü ÁÂÇ¥¿Í ³ĞÀÌ ÇÑ¹ø¿¡ Ãâ·ÂÇÏ´Â ¸â¹ö ¸Ş¼Òµå
-        System.out.println("("+x+","+y+")¿¡¼­ Å©±â°¡ "+w+"x"+h+"ÀÎ »ç°¢Çü");
+    public void show(){//ì‚¬ê°í˜• ì¢Œí‘œì™€ ë„“ì´ í•œë²ˆì— ì¶œë ¥í•˜ëŠ” ë©¤ë²„ ë©”ì†Œë“œ
+        System.out.println("("+x+","+y+")ì—ì„œ í¬ê¸°ê°€ "+w+"x"+h+"ì¸ ì‚¬ê°í˜•");
     }
     
-    public int square(){//³ĞÀÌ ¹İÈ¯ ¸â¹ö ¸Ş¼Òµå
+    public int square(){//ë„“ì´ ë°˜í™˜ ë©¤ë²„ ë©”ì†Œë“œ
         return w*h;
     }
     
-    public boolean contains(Rectangle r){//¸Å°³º¯¼ö·Î ¹ŞÀº »ç°¢Çü rÀÌ Çö »ç°¢Çü ¾È¿¡ ÀÖÀ¸¸é true ¸®ÅÏ.
+    public boolean contains(Rectangle r){//ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì€ ì‚¬ê°í˜• rì´ í˜„ ì‚¬ê°í˜• ì•ˆì— ìˆìœ¼ë©´ true ë¦¬í„´.
         if(this.x < r.x && this.y < r.y)
             if((this.x+this.w) > (r.x+r.w) && (this.y+this.h) > (r.y+r.h)) return true;
         return false;
