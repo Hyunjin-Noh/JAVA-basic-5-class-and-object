@@ -1,24 +1,32 @@
+/*p.241 ì‹¤ìŠµë¬¸ì œ1
+ë‹¤ìŒmain() ë©”ì†Œë“œë¥¼ ì‹¤í–‰í•˜ì˜€ì„ ë•Œ ì˜ˆì‹œì™€ ê°™ì´ ì¶œë ¥ë˜ë„ë¡ TVí´ë˜ìŠ¤ë¥¼ ì‘ì„±í•˜ë¼.
+ì˜ˆì‹œ ì…ë ¥ 1 
+ì—†ìŒ
+ì˜ˆì‹œ ì¶œë ¥ 1
+LGì—ì„œ ë§Œë“  2017ë…„í˜• 32ì¸ì¹˜ TV
+*/
+
 class TV {
     private String brand;
     private int year;
     private int inch;
     
-    public TV(String b, int y, int i) { //¸Å°³º¯¼ö¸¦ °¡Áö´Â »ı¼ºÀÚ. »ı¼ºÀÚµµ ¸Ş¼ÒµåÀÓ!
+    public TV(String b, int y, int i) { //ë§¤ê°œë³€ìˆ˜ë¥¼ ê°€ì§€ëŠ” ìƒì„±ì. ìƒì„±ìë„ ë©”ì†Œë“œì„!
         brand = b;
         year = y;
         inch = i;
     }
     
     public void show(){
-        System.out.println(brand+"¿¡¼­ ¸¸µç "+year+"³âÇü "+inch+"ÀÎÄ¡ TV");
+        System.out.println(brand+"ì—ì„œ ë§Œë“  "+year+"ë…„í˜• "+inch+"ì¸ì¹˜ TV");
     }
 }
 
 public class Main1tvclass
 {
 	public static void main(String[] args) {
-		TV myTV = new TV("LG", 2017, 32);//Å¬·¡½º  TVÀÇ °´Ã¼¿¡ ´ëÇÏ¿© ·¹ÆÛ·±½º º¯¼ö  myTV ¼±¾ğ, »õ·Î¿î TV Å¸ÀÔÀÇ °´Ã¼¸¦ »ı¼º. 
-		                                 //Å¬·¡½º TV¿¡¼­ Á¤ÀÇµÈ »ı¼ºÀÚ¿¡ ÀÇÇØ »ı¼º.
-		myTV.show(); //show() ¸Ş¼Òµå ½ÇÇà
+		TV myTV = new TV("LG", 2017, 32);//í´ë˜ìŠ¤  TVì˜ ê°ì²´ì— ëŒ€í•˜ì—¬ ë ˆí¼ëŸ°ìŠ¤ ë³€ìˆ˜  myTV ì„ ì–¸, ìƒˆë¡œìš´ TV íƒ€ì…ì˜ ê°ì²´ë¥¼ ìƒì„±. 
+		                                 //í´ë˜ìŠ¤ TVì—ì„œ ì •ì˜ëœ ìƒì„±ìì— ì˜í•´ ìƒì„±.
+		myTV.show(); //show() ë©”ì†Œë“œ ì‹¤í–‰
 	}
 }
